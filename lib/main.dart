@@ -12,6 +12,7 @@ class CalendarMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: CalendarApp(),
     );
   }
@@ -99,11 +100,21 @@ class _CalendarAppState extends State<CalendarApp> {
               //Muestro y configuro el calendario en pantalla
               TableCalendar(
                 calendarController: _controller,
+                availableCalendarFormats: {
+                  //Solo mostrara el mes
+                  CalendarFormat.month: 'Month',
+                  //Solo mostrara el mes y la primera semana
+                  //CalendarFormat.week: 'Weeks',
+                  //Solo mostrara el mes y las primeras dos semanas
+                  //CalendarFormat.twoWeeks: '2 Weeks',
+                },
                 //Aqui elijo el primer dia de la semana
                 //Lunes en este caso
                 startingDayOfWeek: StartingDayOfWeek.monday,
                 //Aqui configuro los numeros del calendario
                 calendarStyle: CalendarStyle(
+                  renderDaysOfWeek: true,
+                  renderSelectedFirst: false,
                   weekdayStyle: TextStyle(
                     color: Color(0xff30384C),
                     fontWeight: FontWeight.bold,
@@ -179,21 +190,21 @@ class _CalendarAppState extends State<CalendarApp> {
                           ),
                         ),
                         taskList(
-                          "Turno a las 10:30",
-                          "Doctor Roberto Bolanioz, Pediatra",
+                          "Turno de las 10:30",
+                          "Dr. Roberto Bolanioz, Pediatra",
                           CupertinoIcons.clock_solid,
                           Color(0xFFFF9E00),
                         ),
 
                         taskList(
-                          "Turno a las 11:00",
-                          "Doctor Roberto Bolanioz, Pediatra",
+                          "Mi turno a las 11:00",
+                          "Dr. Roberto Bolanioz, Pediatra",
                           CupertinoIcons.check_mark_circled_solid,
                           Color(0xFF00CF8D),
                         ),
                         taskList(
-                          "Turno a las 11:30",
-                          "Doctor Roberto Bolanioz, Pediatra",
+                          "Turno de las 11:30",
+                          "Dr. Roberto Bolanioz, Pediatra",
                           CupertinoIcons.clock_solid,
                           Color(0xFFFF9E00),
                         ),
