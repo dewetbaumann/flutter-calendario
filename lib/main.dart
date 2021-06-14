@@ -229,31 +229,17 @@ class _CalendarAppState extends State<CalendarApp> {
                       ),
                     ),
                     Positioned(
-                        bottom: 40,
-                        right: 20,
-                        child: FloatingActionButton(
-                          onPressed: () {},
-                          child: Text(
-                            "+",
-                            style: TextStyle(color: Colors.white, fontSize: 30),
-                          ),
-                          backgroundColor: Color(0xFFB038F1),
-                        )
-                        /*Container(
-                        height: 60,
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Color(0xFFB038F1),
-                            boxShadow: [
-                              BoxShadow(color: Colors.black38, blurRadius: 30),
-                            ]),
+                      bottom: 40,
+                      right: 20,
+                      child: FloatingActionButton(
+                        onPressed: () {},
                         child: Text(
                           "+",
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
-                      ),*/
-                        )
+                        backgroundColor: Color(0xFFB038F1),
+                      ),
+                    )
                   ],
                 ),
               )
